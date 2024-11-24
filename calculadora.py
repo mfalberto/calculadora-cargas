@@ -95,7 +95,3 @@ elif calculation_type == "Pavimento Completo":
         total_weight = calculate_pavement(wall_area, wall_weight, floor_area, floor_weight, num_columns)
         st.success(f"Peso por coluna: {total_weight:.2f} kN")
 
----
-
-### **Próximos Passos**
-Se você tiver dúvidas ou encontrar algo que precise de ajustes, posso fazer melhorias. Este é o código final ajustado.

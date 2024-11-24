@@ -98,4 +98,4 @@ elif calculation_type == "Pavimento Completo":
 ---
 
 ### **Próximos Passos**
-Se você tiver dúvidas ou encontrar algo que precise de ajustes, posso fazer melhorias. Este é o código final ajustado. 😊
+Se você tiver dúvidas ou encontrar algo que precise de ajustes, posso fazer melhorias. Este é o código final ajustado.

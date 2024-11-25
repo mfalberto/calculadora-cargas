@@ -24,26 +24,28 @@ elif calculation_type == "Pavimento Completo":
     st.write("Avançando para a seção de entrada de dados para Pavimento Completo...")
 # Entrada de Dados Dinâmica para Cada Tipo de Cálculo
 
-# Carregar tabelas de materiais e cargas
+# Carregar tabelas completas com os dados fornecidos
 materials_volume = pd.DataFrame({
-    "Categoria": ["Argamassas e concreto", "Blocos artificiais e pisos", "Madeiras", "Metais", "Rochas naturais"],
-    "Material": [
-        "Argamassa de areia e cimento",
-        "Blocos de concreto vazados",
-        "Cedro",
-        "Aço",
-        "Granito"
+    "Categoria": [
+        "Argamassas e concreto", "Argamassas e concreto", "Argamassas e concreto",
+        "Blocos artificiais e pisos", "Blocos artificiais e pisos", "Blocos artificiais e pisos",
+        "Blocos artificiais e pisos", "Blocos artificiais e pisos", "Madeiras", "Madeiras",
+        "Madeiras", "Metais", "Metais", "Metais", "Metais", "Rochas naturais", "Rochas naturais"
     ],
-    "Peso (kN/m³)": [21, 16, 7, 78, 30]
+    "Material": [
+        "Argamassa de areia e cimento", "Argamassa de cal e gesso", "Concreto simples",
+        "Blocos de concreto vazados", "Blocos cerâmicos vazados", "Blocos maciços",
+        "Blocos de concreto celular autoclavado", "Porcelanato", "Cedro", "Compensados",
+        "Ipê", "Aço", "Alumínio", "Bronze", "Chumbo", "Arenito", "Granito"
+    ],
+    "Peso (kN/m³)": [
+        21, 15, 25, 16, 16, 18, 9, 23, 7, 10, 12, 78, 28, 88, 113, 27, 30
+    ]
 })
 
 materials_area = pd.DataFrame({
     "Categoria": ["Paredes", "Telhados", "Revestimentos"],
-    "Material": [
-        "Alvenaria de tijolo comum",
-        "Telhas cerâmicas",
-        "Revestimento cerâmico"
-    ],
+    "Material": ["Alvenaria de tijolo comum", "Telhas cerâmicas", "Revestimento cerâmico"],
     "Peso (kN/m²)": [1.8, 0.6, 0.9]
 })
 
@@ -92,3 +94,4 @@ elif calculation_type == "Pavimento Completo":
     st.write(f"Peso por unidade de área do piso: {floor_weight} kN/m²")
     floor_area = st.number_input("Área do pavimento (m²):", min_value=0.0, format="%.2f")
     num_columns = st.number_input("Número total de colunas:", min_value=1, format="%d")
+

@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd  # Certifique-se de importar pandas
-pip install pandas
 
 # Título da aplicação
 st.title("Calculadora de Cargas em Estruturas")
